@@ -26,8 +26,6 @@ public class Medico extends Persona implements Serializable {
         this.especialidad = Objects.requireNonNull(builder.especialidad, "La especialidad no puede ser nula");
     }
 
-    public static Object getEspecialidad() {
-    }
 
     public static abstract class MedicoBuilder<C extends Medico, B extends MedicoBuilder<C, B>> extends PersonaBuilder<C, B> {
         private String numeroMatricula;

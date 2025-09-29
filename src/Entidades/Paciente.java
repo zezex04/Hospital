@@ -10,6 +10,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Getter
+@SuperBuilder
+
 public class Paciente extends Persona implements Serializable {
     private final HistoriaClinica historiaClinica;
     private final String telefono;

@@ -11,6 +11,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Getter
+@ToString(exclude = {"hospital", "medicos", "salas"})
+@Builder
+
 public class Departamento {
     private final String nombre;
     private final EspecialidadMedica especialidad;

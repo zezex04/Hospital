@@ -10,6 +10,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Getter
+@ToString(exclude = {"departamentos", "pacientes"})
+@Builder
+
 public class Hospital implements Serializable {
     private final String nombre;
     private final String direccion;
