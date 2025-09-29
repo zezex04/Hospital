@@ -1,5 +1,7 @@
 package Entidades;
 
+import lombok.experimental.StandardException;
+
 //Manejo de errores granular
 
 public class CitaException extends RuntimeException {

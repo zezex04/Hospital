@@ -1,6 +1,8 @@
 package Entidades;
 
 import lombok.Setter;
+import lombok.Getter;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
 import java.util.ArrayList;

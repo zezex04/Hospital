@@ -2,6 +2,8 @@ package Entidades;
 
 
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+import lombok.Getter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,6 +11,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Getter
+@SuperBuilder
 public class Medico extends Persona implements Serializable {
     private final Matricula matricula;
     private final EspecialidadMedica especialidad;
@@ -20,6 +24,9 @@ public class Medico extends Persona implements Serializable {
         super(builder);
         this.matricula = new Matricula(builder.numeroMatricula);
         this.especialidad = Objects.requireNonNull(builder.especialidad, "La especialidad no puede ser nula");
+    }
+
+    public static Object getEspecialidad() {
     }
 
     public static abstract class MedicoBuilder<C extends Medico, B extends MedicoBuilder<C, B>> extends PersonaBuilder<C, B> {
@@ -53,4 +60,3 @@ public class Medico extends Persona implements Serializable {
 
 }
 
-}

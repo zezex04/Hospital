@@ -2,6 +2,9 @@ package Entidades;
 
 //El sistema está organizado alrededor de una entidad central Hospital que
 //contiene múltiples Departamentos especializados.
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,5 +1,10 @@
 package Entidades;
 
+import lombok.Setter;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -9,6 +14,10 @@ import java.util.Objects;
 //La clase Cita actúa como entidad asociativa compleja,
 // resolviendo la relación muchos-a-muchos entre pacientes, médicos y salas de forma elegante y
 //eficiente.
+
+@Getter
+@ToString(exclude = {"paciente", "medico", "sala"})
+@Builder
 
 public class Cita implements Serializable {
     private final Paciente paciente;
@@ -30,6 +39,7 @@ public class Cita implements Serializable {
         this.estado = builder.estado != null ? builder.estado : EstadoCita.PROGRAMADA;
         this.observaciones = builder.observaciones != null ? builder.observaciones : "";
     }
+
 
     public static class CitaBuilder {
         private Paciente paciente;
@@ -169,4 +179,3 @@ public class Cita implements Serializable {
     }
 }
 
-}

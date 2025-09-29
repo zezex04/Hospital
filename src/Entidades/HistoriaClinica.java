@@ -1,11 +1,19 @@
 package Entidades;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+
+@Getter
+@ToString(exclude = {"paciente", "diagnosticos", "tratamientos", "alergias"})
+@Builder
 
 public class HistoriaClinica implements Serializable {
     private final String numeroHistoria;

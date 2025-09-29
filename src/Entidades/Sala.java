@@ -1,10 +1,19 @@
 package Entidades;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.experimental.SuperBuilder;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+
+@Getter
+@ToString(exclude = {"departamento", "citas"})
+@Builder
 
 public class Sala implements Serializable {
     private final String numero;
@@ -17,6 +26,8 @@ public class Sala implements Serializable {
         this.tipo = validarString(builder.tipo, "El tipo de sala no puede ser nulo ni vacío");
         this.departamento = Objects.requireNonNull(builder.departamento, "El departamento no puede ser nulo");
     }
+
+
 
     public static class SalaBuilder {
         private String numero;

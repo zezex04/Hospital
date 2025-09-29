@@ -32,7 +32,7 @@ public class CitaManager implements CitaService{
             throw new CitaException("La sala no está disponible en la fecha y hora solicitadas.");
         }
 
-        if (!medico.getEspecialidad().equals(sala.getDepartamento().getEspecialidad())) {
+        if (!Medico.getEspecialidad().equals(sala.getDepartamento().getEspecialidad())) {
             throw new CitaException("La especialidad del médico no coincide con el departamento de la sala.");
         }
 

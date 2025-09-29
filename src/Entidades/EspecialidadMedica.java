@@ -3,7 +3,11 @@ package Entidades;
 //Un enum (enumeración) es un tipo especial de clase
 // que representa un conjunto fijo y limitado de valores
 // constantes.
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
+@Getter
 public enum EspecialidadMedica {
     CARDIOLOGIA("Cardiología"),
     NEUROLOGIA("Neurología"),

@@ -1,5 +1,8 @@
 package Entidades;
 
+import lombok.Getter;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.util.Objects;
 
